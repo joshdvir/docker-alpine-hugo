@@ -15,4 +15,5 @@ RUN apk add --update \
 # Download and Install hugo
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /usr/local/
 RUN tar xzf /usr/local/${HUGO_BINARY}.tar.gz -C /usr/local/bin/ \
-	&& rm /usr/local/${HUGO_BINARY}.tar.gz
+	&& rm /usr/local/${HUGO_BINARY}.tar.gz \
+  && mv /usr/local/bin/hugo*/hugo* /usr/local/bin/hugo
