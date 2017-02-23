@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Josh Dvir <josh@dvir.uk>
 
 ENV HUGO_VERSION 0.18.1
-ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit
 
 RUN apk add --update \
     tar \
@@ -13,6 +13,6 @@ RUN apk add --update \
     && rm -rf /var/cache/apk/*
 
 # Download and Install hugo
-ADD https://github.com/spf13/hugo/releases/download/tag/v${HUGO_VERSION}/${HUGO_BINARY}.tgz /usr/local/
+ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tgz /usr/local/
 RUN tar xzf /usr/local/${HUGO_BINARY}.tgz -C /usr/local/bin/ \
 	&& rm /usr/local/${HUGO_BINARY}.tgz
