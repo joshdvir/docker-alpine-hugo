@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Josh Dvir <josh@dvir.uk>
 
-ENV HUGO_VERSION 0.18.1
+ENV HUGO_VERSION 0.27
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit
 
 RUN apk add --update \
