@@ -13,7 +13,7 @@ RUN apk add --update \
     && rm -rf /var/cache/apk/*
 
 # Download and Install hugo
-ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_BINARY}_Linux-64bit.tar.gz /usr/local/
+ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /usr/local/
 
 RUN tar xzf /usr/local/${HUGO_BINARY}.tar.gz -C /usr/local/bin/ \
 	&& rm /usr/local/${HUGO_BINARY}.tar.gz \
