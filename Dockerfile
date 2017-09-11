@@ -17,4 +17,4 @@ ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_B
 
 RUN tar xzf /usr/local/${HUGO_BINARY}.tar.gz -C /usr/local/bin/ \
 	&& rm /usr/local/${HUGO_BINARY}.tar.gz \
-  && mv /usr/local/bin/hugo*/hugo* /usr/local/bin/hugo
+  && mv /usr/local/bin/hugo*/hugo /usr/local/bin/hugo
